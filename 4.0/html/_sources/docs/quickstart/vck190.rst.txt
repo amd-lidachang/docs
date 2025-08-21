@@ -2,7 +2,7 @@
 Quick Start Guide for Versal |trade| AI Edge VEK280
 ###################################################
 
-The AMD **DPUCV2DX8G** for Versal |trade| AI Edge is a configurable computation engine dedicated to convolutional neural networks. It supports a highly optimized instruction set, enabling the deployment of most convolutional neural networks. The following instructions will help you to install the software and packages required to support VEK280.
+The AMD **DPUCVDX8G** for Versal |trade| AI Core is a configurable computation engine dedicated to convolutional neural networks. It supports a highly optimized instruction set, enabling the deployment of most convolutional neural networks. The following instructions will help you to install the software and packages required to support VEK280.
 
 .. image:: ../reference/images/VEK280_Top_img.png
 	:width: 400
@@ -24,7 +24,7 @@ Host Requirements
 Applicable Targets
 ==================
 
--  This quickstart is applicable to the `VEK280 <https://www.xilinx.com/vek280>`__
+-  This quickstart is applicable to the `VCK190 <https://www.xilinx.com/vck190>`__
 
 
 WSL 
@@ -110,7 +110,7 @@ It will be useful to you later on to have the cross-compiler installed.  This wi
 
 .. code-block:: Bash
 
-    [Host] $ cd Vitis-AI/board_setup/vek280
+    [Host] $ cd Vitis-AI/board_setup/vck190
     [Host] $ sudo chmod u+r+x host_cross_compiler_setup.sh
     [Host] $ ./host_cross_compiler_setup.sh
 	  
