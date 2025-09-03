@@ -19,7 +19,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-5RHQV7');</script>
 <!-- End Google Tag Manager -->
-  <title>Quick Start Guide for Alveo V70 &mdash; Vitis™ AI 4.0 documentation</title>
+  <title>Quick Start Guide for Alveo V70 &mdash; Vitis™ AI 3.5 documentation</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/_static/custom.css" type="text/css" />
@@ -27,12 +27,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="../../_static/documentation_options.js?v=9f5556dd"></script>
+        <script src="../../_static/documentation_options.js?v=490739ad"></script>
         <script src="../../_static/doctools.js?v=9bcbadda"></script>
         <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
-    <link rel="search" title="Search" href="../../search.html" /> 
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Overview" href="../workflow.html" />
+    <link rel="prev" title="Quick Start Guide for Versal™ AI Edge VEK280" href="vek280.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -47,7 +49,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <a href="../../index.html" class="icon icon-home"> Vitis™ AI
           </a>
               <div class="version">
-                4.0
+                3.5
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -64,8 +66,33 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="toctree-l1"><a class="reference internal" href="../install/install.html">Host Install Instructions</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Quick Start Guides</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="vck190.html">Versal™ AI  Core VCK190</a></li>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="vek280.html">Versal™ AI Edge VEK280</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Alveo™ V70</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#prerequisites">Prerequisites</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#system-requirements">System Requirements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#applicable-targets">Applicable Targets</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#quickstart">Quickstart</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#clone-the-vitis-ai-repository">Clone the Vitis AI Repository</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#alveo-v70-setup">Alveo V70 Setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#install-docker">Install Docker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#verify-docker-installation">Verify Docker Installation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pull-vitis-ai-docker">Pull Vitis AI Docker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#docker-container-environment-variable-setup">Docker Container Environment Variable Setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#vitis-ai-model-zoo">Vitis-AI Model Zoo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#run-the-vitis-ai-examples">Run the Vitis AI Examples</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#pytorch-tutorial">PyTorch Tutorial</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#quantizing-the-model">Quantizing the Model</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#compile-the-model">Compile the Model</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#model-deployment">Model Deployment</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Workflow and Components</span></p>
 <ul>
@@ -543,13 +570,16 @@ contain test images and videos that can be leveraged to evaluate our quantized m
           </div>
           
 				  
-				  <footer>
+				  <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="vek280.html" class="btn btn-neutral float-left" title="Quick Start Guide for Versal™ AI Edge VEK280" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../workflow.html" class="btn btn-neutral float-right" title="Overview" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
 
   <hr/>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2022-2023, Advanced Micro Devices, Inc.
-      <span class="lastupdated">Last updated on August 21, 2025.
+      <span class="lastupdated">Last updated on September 02, 2025.
       </span></p>
   </div>
 

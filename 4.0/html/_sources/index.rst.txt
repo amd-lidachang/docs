@@ -122,8 +122,8 @@ The :ref:`Vitis AI Profiler <vitis-ai-profiler>` profiles and visualizes AI appl
    :caption: Quick Start Guides
    :hidden:
 
-   Versal™ AI  Core VCK190 <docs/quickstart/vck190>
-
+   Versal™ AI Edge VEK280 <docs/quickstart/vek280>
+   Alveo™ V70 <docs/quickstart/v70>
 
 
 .. toctree::
