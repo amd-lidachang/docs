@@ -165,15 +165,17 @@ The Vitis AI Runtime packages, VART samples, Vitis-AI-Library samples, and model
 .. note:: We recommend the Logitech BRIO for use with Vitis AI pre-built images.  The Logitech BRIO is capable of streaming RAW video at higher resolutions than most low-cost webcams.  When leveraging other low-cost webcams with the Vitis AI pre-built image, encoded video streams are actually decoded on the target's ARM APU which can reduce inference performance.
 
 
-.. note:: The Kria KV260 can be leveraged with either HDMI or DisplayPort monitors.
+.. .. note:: The Kria KV260 can be leveraged with either HDMI or DisplayPort monitors.
 	
-.. image:: ../reference/images/kria_setup.png
-	:width: 1300
+.. .. image:: ../reference/images/kria_setup.png
+.. 	:width: 1300
 		
 .. note:: For ZCU102 and ZCU104, please use a display port monitor and reference the respective user guide to configure the target jumper and switch settings to factory defaults.  For both the ZCU102 and ZCU104, set Mode SW6 [4:1] = [OFF, OFF, OFF, ON] to boot from SD card.
 
+
 .. image:: ../reference/images/ZCU102_setup.png
 	:width: 1300
+
 
 .. image:: ../reference/images/ZCU104_setup.png
 	:width: 1300
