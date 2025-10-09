@@ -2,7 +2,7 @@
 Quick Start Guide for Zynq |trade| UltraScale+ |trade| 
 ######################################################
 
-The AMD **DPUCZDX8G** for Zynq |trade| Ultrascale+ |trade| is a configurable computation engine dedicated to convolutional neural networks. It supports a highly optimized instruction set, enabling the deployment of most convolutional neural networks. The following instructions will help you to install the software and packages required to support KV260/ZCU102/ZCU104.
+The AMD **DPUCZDX8G** for Zynq |trade| Ultrascale+ |trade| is a configurable computation engine dedicated to convolutional neural networks. It supports a highly optimized instruction set, enabling the deployment of most convolutional neural networks. The following instructions will help you to install the software and packages required to support ZCU102/ZCU104.
 
 
 *************
@@ -28,7 +28,7 @@ Applicable Targets
      - Supported Target(s)
 
    * - Zynq |trade| Ultrascale+ |trade| Adaptable SoC Evaluation Boards
-     - `ZCU102 <https://www.xilinx.com/zcu102>`__ / `ZCU104 <https://www.xilinx.com/zcu104>`__ / `Kria KV260 <https://www.xilinx.com/kria>`__
+     - `ZCU102 <https://www.xilinx.com/zcu102>`__ / `ZCU104 <https://www.xilinx.com/zcu104>`__ 
 
 
 
@@ -183,9 +183,9 @@ The Vitis AI Runtime packages, VART samples, Vitis-AI-Library samples, and model
 
 2. Download the Vitis AI pre-built SD card image from the appropriate link:
 
-   - `ZCU102 <https://www.xilinx.com/member/forms/download/design-license-xef.html?filename=xilinx-zcu102-dpu-v2022.2-v3.0.0.img.gz>`__
-   - `ZCU104 <https://www.xilinx.com/member/forms/download/design-license-xef.html?filename=xilinx-zcu104-dpu-v2022.2-v3.0.0.img.gz>`__
-   - `KV260 <https://www.xilinx.com/member/forms/download/design-license-xef.html?filename=xilinx-kv260-dpu-v2022.2-v3.0.0.img.gz>`__
+   - `ZCU102 <https://www.xilinx.com/member/forms/download/design-license-xef.html?filename=xilinx-zcu102-dpu-v2025.1-v5.0.0.img.gz>`__
+   - `ZCU104 <https://www.xilinx.com/member/forms/download/design-license-xef.html?filename=xilinx-zcu104-dpu-v2025.1-v5.0.0.img.gz>`__
+
 
 
 
