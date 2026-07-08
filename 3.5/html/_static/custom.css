@@ -22,3 +22,13 @@
     .wy-nav-content{padding:1.618em}
     .wy-nav-content-wrap.shift{position:fixed;min-width:100%;left:85%;top:0;height:100%;overflow:hidden}
 }
+
+.dpu-ip-discontinued {
+    margin: 22px 0 36px;
+    padding: 18px 26px;
+    border-left: 4px solid #b84a3f;
+    background: #fff5f2;
+    color: #4a170f;
+    font-size: 24px;
+    font-weight: 700;
+}

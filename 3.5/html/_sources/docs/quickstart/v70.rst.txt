@@ -2,7 +2,7 @@
 Quick Start Guide for Alveo V70
 ###############################
 
-The AMD **DPUCV2DX8G** for the Alveo |trade| V70 is a configurable computation engine dedicated to convolutional neural networks. It supports a highly optimized instruction set, enabling the deployment of most convolutional neural networks. The following instructions will help you install the software and packages required to support V70.
+The AMD **DPUCV2DX8G** for the Alveo |trade| V70 is a configurable computation engine dedicated to convolutional neural networks. It supports a highly optimized instruction set, enabling the deployment of most convolutional neural networks. The following instructions will help you to install the software and packages required to support V70.
 
 .. image:: ../reference/images/V70.PNG
 	:width: 1300
@@ -35,12 +35,12 @@ Clone the Vitis AI Repository
         [Host] $ git clone https://github.com/Xilinx/Vitis-AI
 
 
-Alveo V70 Setup
+Versal V70 Setup
 ================
 
 A script is provided to drive the V70 card setup process.
 
-.. note:: You should run this script on the host machine, OUTSIDE of the Docker container. After the script has executed successfully, manually reboot the host server once. For data center DPUs, Vitis |trade| AI 3.5 specifically leverages the 2022.2 versions of the Vitis tools, V70 platform, XRT and XRM.  No, that is not a typo - 2022 is correct.
+.. note:: You should run this script on the host machine, OUTSIDE of the Docker container. After the script has executed successfully, manually reboot the host server once. For data center DPUs, Vitis |trade| AI 3.5 specifically leverages the 2023.1 versions of the Vitis tools, V70 platform, XRT and XRM.
 
 This script will detect the operating system of the host, and will download and install the appropriate packages for that operating system.
 
@@ -96,7 +96,6 @@ In order to simplify this quickstart tutorial, we will utilize the Vitis-AI PyTo
 Pull and start the latest Vitis AI Docker using the following commands:
 
 .. code-block:: Bash
-
 	[Host] $ docker pull xilinx/vitis-ai-pytorch-cpu:latest
 	[Host] $ cd <Vitis-AI install path>/Vitis-AI/
 	[Host] $ ./docker_run.sh xilinx/vitis-ai-pytorch-cpu:latest
@@ -109,13 +108,12 @@ From inside the docker container, execute one of the following commands to set t
 .. code-block:: Bash
 
 	[Docker] $ source /workspace/board_setup/v70/setup.sh DPUCV2DX8G_v70
-
-.. note:: You will need to execute this script each time you re-enter the Docker container.	  
+	  
 	  
 Vitis-AI Model Zoo
 ==================
    
-You can now select a model from the `Vitis AI Model Zoo <../workflow-model-zoo.html>`__.  Navigate to the  `model-list subdirectory  <https://github.com/Xilinx/Vitis-AI/tree/master/model_zoo/model-list>`__  and select the model that you wish to test. For each model, a YAML file provides key details of the model. In the YAML file there are separate hyperlinks to download the model for each supported target.  Choose the correct link for your target platform and download the model.
+You can now select a model from the Vitis AI Model Zoo `Vitis AI Model Zoo <../workflow-model-zoo.html>`__.  Navigate to the  `model-list subdirectory  <https://github.com/Xilinx/Vitis-AI/tree/master/model_zoo/model-list>`__  and select the model that you wish to test. For each model, a YAML file provides key details of the model. In the YAML file there are separate hyperlinks to download the model for each supported target.  Choose the correct link for your target platform and download the model.
 
 - Take the ResNet50 model as an example.
 
@@ -145,7 +143,7 @@ Run the Vitis AI Examples
 
 .. code-block:: Bash
 
-	[Docker] $ tar -xzvf vitis_ai_runtime_r3.5.0_image_video.tar.gz -C /workspace/examples/vai_runtime
+	[Docker] $ tar -xzvf vitis_ai_runtime_r3.5.0_image_video.tar.gz -C /worksapce/examples/vai_runtime
 	
 3. Navigate to the example directory.
 
@@ -158,7 +156,6 @@ Run the Vitis AI Examples
 
 .. code-block:: Bash
 
-	[Docker] $ sudo chmod u+r+x build.sh
 	[Docker] $ bash -x build.sh
 
 5. Run the example.
@@ -232,7 +229,7 @@ floating-point model as an input and performs pre-processing (folds batchnorms a
 .. code-block:: Bash
 	
 	[Host] $ cd ..
-	[Host] ./docker_run.sh xilinx/vitis-ai-pytorch-cpu:latest
+	[Host] ./docker_run.sh vitis-ai-pytorch-cpu:latest
 
 * Note that when you start Docker appropriate as shown above, your ``/workspace`` folder will correspond to ``/Vitis-AI`` and your initial path in Docker will be ``/workspace``.  If you inspect ``docker_run.sh`` you can see that the -v option is leveraged which links the Docker file system to your Host file system.  Verify that you see the created ``/resnet18`` subfolder in your workspace:
 
@@ -240,11 +237,10 @@ floating-point model as an input and performs pre-processing (folds batchnorms a
 	
 	[Docker] $ ls
 
-4. Next, download the pre-trained resnet18 model from PyTorch to the docker environment and store it in the  ``model``  folder . This is the floating point (FP32) model that will be quantized to INT8 precision for deployment on the target. Also, since you have re-entered the Docker container, you need to re-run the setup script.  
+4. Download the pre-trained resnet18 model from PyTorch to the docker environment and store it in the  ``model``  folder . This is the floating point (FP32) model that will be quantized to INT8 precision for deployment on the target.
 
 .. code-block:: Bash
 
-	[Docker] $ source /workspace/board_setup/v70/setup.sh DPUCV2DX8G_v70
 	[Docker] $ cd resnet18/model
 	[Docker] $ wget https://download.pytorch.org/models/resnet18-5c106cde.pth -O resnet18.pth
 
@@ -383,7 +379,7 @@ The Vitis AI Compiler compiles the graph operators as a set of micro-coded instr
 Model Deployment
 ================
 
-1. Copy the ``resnet18_pt`` folder into the ``/usr/share/vitis_ai_library/models/`` directory.  This will locate your compiled model in the default Vitis AI Library example model directory, alongside the other Vitis AI example models.  Our purpose in doing this is to simplify the commands that follow, in which we will execute the Vitis AI Library samples with our model.
+1. Locate the ``resnet18_pt`` folder ``/usr/share/vitis_ai_library/models/`` folder along with the other Viitis AI model examples. 
 
 2. The `vitis_ai_library_r3.5.0_images.tar.gz <https://www.xilinx.com/bin/public/openDownload?filename=vitis_ai_library_r3.5.0_images.tar.gz>`__ and `vitis_ai_library_r3.5.0_video.tar.gz <https://www.xilinx.com/bin/public/openDownload?filename=vitis_ai_library_r3.5.0_video.tar.gz>`__ packages 
 contain test images and videos that can be leveraged to evaluate our quantized model and other pre-built Vitis-AI Library examples. 
@@ -401,8 +397,8 @@ contain test images and videos that can be leveraged to evaluate our quantized m
 
 	.. code-block:: Bash
 	
-		[Docker] $ tar -xzvf vitis_ai_library_r3.5.0_images.tar.gz -C /workspace/examples/vai_library/
-		[Docker] $ tar -xzvf vitis_ai_library_r3.5.0_video.tar.gz -C /workspace/examples/vai_library/
+		[Target] $ tar -xzvf vitis_ai_library_r3.5.0_images.tar.gz -C ~/Vitis-AI/examples/vai_library/
+		[Target] $ tar -xzvf vitis_ai_library_r3.5.0_video.tar.gz -C ~/Vitis-AI/examples/vai_library/
 
 3. Enter the directory of the sample and then compile it.
 
@@ -415,7 +411,7 @@ contain test images and videos that can be leveraged to evaluate our quantized m
 
 .. code-block:: Bash
 
-	[Docker] $ ./test_jpeg_classification resnet18_pt /workspace/examples/vai_library/samples/classification/images/001.JPEG
+	[Docker] $ ./test_jpeg_classification resnet18_pt /workspace/examples/vai_library/samples/classification/images/002.jpg
 
 If you wish to do so, you can review the `result.jpg` file.  OpenCV function calls have been used to overlay the predictions.
 
@@ -423,7 +419,7 @@ If you wish to do so, you can review the `result.jpg` file.  OpenCV function cal
 
 .. code-block:: Bash
 
-	[Docker] $ ./test_video_classification resnet18_pt /workspace/examples/vai_library/apps/seg_and_pose_detect/pose_960_540.avi -t 8
+	[Docker] $ ./test_video_classification resnet18_pt /workspace/examples/vai_library/apps/pose_960_540.avi -t 8
 
 7. The output should be as follows:
 
