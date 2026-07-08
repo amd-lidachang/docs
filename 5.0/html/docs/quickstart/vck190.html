@@ -20,16 +20,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-5RHQV7');</script>
 <!-- End Google Tag Manager -->
   <title>Quick Start Guide for VCK190 &mdash; Vitis™ AI 5.0 documentation</title>
-      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../../_static/_static/custom.css" type="text/css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=27bbe381" />
+      <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=8de04d76" />
   <!--[if lt IE 9]>
     <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
         <script src="../../_static/documentation_options.js?v=ee801c84"></script>
-        <script src="../../_static/doctools.js?v=9bcbadda"></script>
-        <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+        <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -153,6 +153,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
              
   <section id="quick-start-guide-for-vck190">
 <h1>Quick Start Guide for VCK190<a class="headerlink" href="#quick-start-guide-for-vck190" title="Link to this heading">¶</a></h1>
+<div class="dpu-ip-discontinued docutils container">
+<p><strong>DPU IP Discontinued</strong></p>
+</div>
 <p>The AMD <strong>DPUCVDX8G</strong> for Versal™ VCK190 is a configurable computation engine dedicated to convolutional neural networks. It supports a highly optimized instruction set, enabling the deployment of most convolutional neural networks. The following instructions will help you to install the software and packages required to support VCK190.</p>
 <section id="prerequisites">
 <h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Link to this heading">¶</a></h2>
@@ -276,7 +279,7 @@ directory on the host.  Thus you will note that <code class="docutils literal no
 <p class="admonition-title">Note</p>
 <p>We recommend the Logitech BRIO for use with Vitis AI pre-built images.  The Logitech BRIO is capable of streaming RAW video at higher resolutions than most low-cost webcams.  When leveraging other low-cost webcams with the Vitis AI pre-built image, encoded video streams are actually decoded on the target’s ARM APU which can reduce inference performance.</p>
 </div>
-<a class="reference internal image-reference" href="../../_images/vck190-setup.png"><img alt="../../_images/vck190-setup.png" src="../../_images/vck190-setup.png" style="width: 1300px;" />
+<a class="reference internal image-reference" href="../../_images/vck190-setup.png"><img alt="../../_images/vck190-setup.png" src="../../_images/vck190-setup.png" width="1300" />
 </a>
 <ul>
 <li><p>Configure the board to SD boot mode:</p>
@@ -298,7 +301,7 @@ directory on the host.  Thus you will note that <code class="docutils literal no
 </li>
 <li><p>Use BalenaEtcher to burn the image file onto the SD card.</p></li>
 </ol>
-<a class="reference internal image-reference" href="../../_images/Etcher.png"><img alt="../../_images/Etcher.png" src="../../_images/Etcher.png" style="width: 1300px;" />
+<a class="reference internal image-reference" href="../../_images/Etcher.png"><img alt="../../_images/Etcher.png" src="../../_images/Etcher.png" width="1300" />
 </a>
 <ol class="arabic" start="4">
 <li><p>Insert the imaged SD card into the target and power up the board.</p></li>
@@ -331,7 +334,7 @@ directory on the host.  Thus you will note that <code class="docutils literal no
 <div class="highlight-Bash notranslate"><div class="highlight"><pre><span></span><span class="o">[</span>Target<span class="o">]</span><span class="w"> </span>$<span class="w"> </span>ifconfig
 </pre></div>
 </div>
-<a class="reference internal image-reference" href="docs/reference/images/ifconfig.png"><img alt="docs/reference/images/ifconfig.png" src="docs/reference/images/ifconfig.png" style="width: 1300px;" />
+<a class="reference internal image-reference" href="../../_images/ifconfig.png"><img alt="../../_images/ifconfig.png" src="../../_images/ifconfig.png" width="1300" />
 </a>
 <p>If you are using a point-to-point connection or DHCP is not available, you can manually set the IP address:</p>
 <div class="highlight-Bash notranslate"><div class="highlight"><pre><span></span><span class="o">[</span>Target<span class="o">]</span><span class="w"> </span>$<span class="w"> </span>ifconfig<span class="w"> </span>eth0<span class="w"> </span><span class="o">[</span>TARGET_IP_ADDRESS<span class="o">]</span>
@@ -679,7 +682,7 @@ contain test images and videos that can be leveraged to evaluate our quantized m
 <ol class="arabic simple" start="7">
 <li><p>The output will be displayed on the connected monitor.  Notice that the classifications are displayed frame-by-frame as an OpenCV overlay.  The performance will be limited by the refresh rate of the display.  Please see UG1354 for additional details.</p></li>
 </ol>
-<a class="reference internal image-reference" href="../../_images/Wallace.png"><img alt="../../_images/Wallace.png" src="../../_images/Wallace.png" style="width: 1300px;" />
+<a class="reference internal image-reference" href="../../_images/Wallace.png"><img alt="../../_images/Wallace.png" src="../../_images/Wallace.png" width="1300" />
 </a>
 <ul class="simple">
 <li><p>Congratulations! You have successfully quantized, compiled, and deployed a pre-trained model on the target.</p></li>
@@ -702,7 +705,7 @@ contain test images and videos that can be leveraged to evaluate our quantized m
 
   <div role="contentinfo">
     <p>&#169; Copyright 2024-2025, Advanced Micro Devices, Inc.
-      <span class="lastupdated">Last updated on October 09, 2025.
+      <span class="lastupdated">Last updated on July 08, 2026.
       </span></p>
   </div>
 

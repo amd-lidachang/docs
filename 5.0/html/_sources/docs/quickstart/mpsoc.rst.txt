@@ -2,7 +2,9 @@
 Quick Start Guide for Zynq |trade| UltraScale+ |trade| 
 ######################################################
 
-The AMD **DPUCZDX8G** for Zynq |trade| Ultrascale+ |trade| is a configurable computation engine dedicated to convolutional neural networks. It supports a highly optimized instruction set, enabling the deployment of most convolutional neural networks. The following instructions will help you to install the software and packages required to support ZCU102/ZCU104.
+.. include:: /dpu_ip_discontinued_notice.rst
+
+The AMD **DPUCZDX8G** for Zynq |trade| Ultrascale+ |trade| is a configurable computation engine dedicated to convolutional neural networks. It supports a highly optimized instruction set, enabling the deployment of most convolutional neural networks. The following instructions will help you to install the software and packages required to support KV260/ZCU102/ZCU104.
 
 
 *************
@@ -28,7 +30,7 @@ Applicable Targets
      - Supported Target(s)
 
    * - Zynq |trade| Ultrascale+ |trade| Adaptable SoC Evaluation Boards
-     - `ZCU102 <https://www.xilinx.com/zcu102>`__ / `ZCU104 <https://www.xilinx.com/zcu104>`__ 
+     - `ZCU102 <https://www.xilinx.com/zcu102>`__ / `ZCU104 <https://www.xilinx.com/zcu104>`__ / `Kria KV260 <https://www.xilinx.com/kria>`__
 
 
 
@@ -165,17 +167,15 @@ The Vitis AI Runtime packages, VART samples, Vitis-AI-Library samples, and model
 .. note:: We recommend the Logitech BRIO for use with Vitis AI pre-built images.  The Logitech BRIO is capable of streaming RAW video at higher resolutions than most low-cost webcams.  When leveraging other low-cost webcams with the Vitis AI pre-built image, encoded video streams are actually decoded on the target's ARM APU which can reduce inference performance.
 
 
-.. .. note:: The Kria KV260 can be leveraged with either HDMI or DisplayPort monitors.
+.. note:: The Kria KV260 can be leveraged with either HDMI or DisplayPort monitors.
 	
-.. .. image:: ../reference/images/kria_setup.png
-.. 	:width: 1300
+.. image:: ../reference/images/kria_setup.png
+	:width: 1300
 		
 .. note:: For ZCU102 and ZCU104, please use a display port monitor and reference the respective user guide to configure the target jumper and switch settings to factory defaults.  For both the ZCU102 and ZCU104, set Mode SW6 [4:1] = [OFF, OFF, OFF, ON] to boot from SD card.
 
-
 .. image:: ../reference/images/ZCU102_setup.png
 	:width: 1300
-
 
 .. image:: ../reference/images/ZCU104_setup.png
 	:width: 1300
@@ -183,9 +183,9 @@ The Vitis AI Runtime packages, VART samples, Vitis-AI-Library samples, and model
 
 2. Download the Vitis AI pre-built SD card image from the appropriate link:
 
-   - `ZCU102 <https://www.xilinx.com/member/forms/download/design-license-xef.html?filename=xilinx-zcu102-dpu-v2025.1-v5.0.0.img.gz>`__
-   - `ZCU104 <https://www.xilinx.com/member/forms/download/design-license-xef.html?filename=xilinx-zcu104-dpu-v2025.1-v5.0.0.img.gz>`__
-
+   - `ZCU102 <https://www.xilinx.com/member/forms/download/design-license-xef.html?filename=xilinx-zcu102-dpu-v2022.2-v3.0.0.img.gz>`__
+   - `ZCU104 <https://www.xilinx.com/member/forms/download/design-license-xef.html?filename=xilinx-zcu104-dpu-v2022.2-v3.0.0.img.gz>`__
+   - `KV260 <https://www.xilinx.com/member/forms/download/design-license-xef.html?filename=xilinx-kv260-dpu-v2022.2-v3.0.0.img.gz>`__
 
 
 
